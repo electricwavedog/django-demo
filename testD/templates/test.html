@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/update" method="post">
+        {% csrf_token %}
+        姓名：<input type="text" name="name" value="{{ info.name }}">
+        年龄：<input type="text" name="age" value="{{ info.age }}">
+        电话：<input type="text" name="tel" value="{{ info.tel }}">
+        <button type="submit">修改</button><br>
+    </form>
+</body>
+</html>
